@@ -6,8 +6,10 @@ import 'package:intl/intl.dart';
 import 'dart:convert';
 
 /// The add funtion adds the value [a] and [b]
-int add(int a, int b) {
-  return a + b;
+int calculate(int a, int b) {
+  ///20 - 10 = 10
+  var res = subtract(a, b);
+  return a + b + res;
 }
 
 /// The subtract funtion subtracts the value [a] and [b]
