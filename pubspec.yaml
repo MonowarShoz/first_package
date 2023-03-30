@@ -11,7 +11,7 @@ dependencies:
   crypto: ^3.0.2
   flutter:
     sdk: flutter
-  intl: ^0.18.0
+  intl: 
 
 dev_dependencies:
   flutter_test:
