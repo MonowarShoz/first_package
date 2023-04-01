@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
+import 'package:first_package/src/decomp_method.dart';
 import 'package:intl/intl.dart';
 
 class CodeUtil {
@@ -40,16 +41,5 @@ class CodeUtil {
 
   static String decompr(String txt) {
     return Decomp.decompress(txt);
-  }
-}
-
-class Decomp {
-  static String decompress(String zipText) {
-    final decodeBase64Json = base64Decode(zipText);
-    final decodedData = GZipCodec().decode(decodeBase64Json);
-    Uint8List bytes = Uint8List.fromList(decodedData);
-    final utf16CodeUnits = bytes.buffer.asUint16List();
-    final str = String.fromCharCodes(utf16CodeUnits);
-    return str;
   }
 }
