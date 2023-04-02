@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'dart:typed_data';
 
@@ -31,12 +30,6 @@ class CodeUtil {
     }
 
     return out;
-  }
-
-  static String newdecompress(String json) {
-    final decodeBase64Json = base64.decode(json);
-    final decodegZipJson = zlib.decode(decodeBase64Json);
-    return utf8.decode(decodegZipJson);
   }
 
   static String decompr(String txt) {
